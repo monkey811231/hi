@@ -82,6 +82,13 @@ with open("reviews.txt", 'r') as f :
 print(f"檔案讀取完畢，共有{len(wd_list)}筆資料")
 print(f"留言平均長度為{comment_cnt/count}字")
 
+len_filter = []
+for com in wd_list :
+	if len(com) < 100 :
+		len_filter.append(com)
+print(f"字數小於100的留言共有{len(len_filter)}筆")
+print(len_filter[0])
+
 
 
 
