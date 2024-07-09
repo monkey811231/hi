@@ -70,14 +70,24 @@ print("au" in car)
 #讀取檔案
 
 wd_list = []
+comment_cnt = 0
 count = 0
 with open("reviews.txt", 'r') as f :
 	for line in f :
-		wd_list.append(line.strip())
-		#print(len(wd_list))
+		wd_list.append(line.strip()) #取每段留言文字塞進list
+		comment_cnt += len(line)
 		count += 1
 		if count % 1000 == 0 :
 			print(len(wd_list))
+print(f"檔案讀取完畢，共有{len(wd_list)}筆資料")
+print(f"留言平均長度為{comment_cnt/count}字")
+
+
+
+
+
+
+
 
 
 
